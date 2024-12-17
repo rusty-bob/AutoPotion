@@ -7,16 +7,16 @@ namespace AutoPotion;
 
 public class AutoPotionSettings : ISettings
 {
-    public ToggleNode Enable { get; set; } = new ToggleNode(false);
+    public ToggleNode Enable { get; set; } = new(false);
 
-    public FlaskSettings HealthPotionSettings { get; set; } = new(Keys.D1);
-    public FlaskSettings ManaPotionSettings { get; set; } = new(Keys.D2);
+    public FlaskSettings HealthPotionSettings { get; } = new(Keys.D1);
+    public FlaskSettings ManaPotionSettings { get; } = new(Keys.D2);
 }
 
 [Submenu]
 public class FlaskSettings(Keys hotkey)
 {
-    public RangeNode<int> Threshold { get; set; } = new (70, 1, 100);
-    public HotkeyNode Hotkey  { get; set; } = new HotkeyNode(hotkey);
+    public RangeNode<int> Threshold { get; } = new (70, 1, 100);
+    public HotkeyNode Hotkey  { get; } = new(hotkey);
 }
 

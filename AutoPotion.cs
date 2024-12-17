@@ -1,14 +1,6 @@
-﻿using System;
-using System.Linq;
-using System.Threading;
-using System.Windows.Forms;
+﻿using System.Linq;
 using ExileCore2;
 using ExileCore2.PoEMemory.Components;
-using ExileCore2.PoEMemory.MemoryObjects;
-using ExileCore2.Shared.Enums;
-using ImGuiNET;
-using SharpDX;
-using Vector2 = System.Numerics.Vector2;
 
 namespace AutoPotion;
 
