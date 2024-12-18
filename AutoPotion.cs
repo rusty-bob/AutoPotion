@@ -15,7 +15,7 @@ public class AutoPotion : BaseSettingsPlugin<AutoPotionSettings>
     
     public override void Tick()
     {
-        if (GameController.Area.CurrentArea.IsTown)
+        if (GameController.Area.CurrentArea.IsTown || !GameController.Player.IsAlive)
         {
             return;
         }
