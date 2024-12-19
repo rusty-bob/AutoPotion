@@ -35,7 +35,7 @@ public class AutoPotion : BaseSettingsPlugin<AutoPotionSettings>
             
             if (mp < Settings.ManaPotionSettings.Threshold)
             {
-                if (ManaBuffs.Any(buffs.HasBuff))
+                if (!ManaBuffs.Any(buffs.HasBuff))
                 {
                     Input.KeyPressRelease(Settings.ManaPotionSettings.Hotkey);
                 }
